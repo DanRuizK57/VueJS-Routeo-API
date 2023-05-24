@@ -2,14 +2,9 @@ import axios from 'axios';
 
 const BASE_URL = 'https://dog.ceo/api';
 
-function listaPerros({ limit, offset }) {
+function listaPerros() {
   return axios
-    .get(`${BASE_URL}/breeds/list/all`, {
-      params: {
-        limit,
-        offset,
-      },
-    })
+    .get(`${BASE_URL}/breeds/list/all`)
     .then((result) => {
       return result.data;
     });
