@@ -61,6 +61,7 @@ export default {
   .contenedor {
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
   }
   .table {
     width: 60%;
