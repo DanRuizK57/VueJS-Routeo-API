@@ -1,8 +1,8 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">{{ alertNumber }}</a>
+        <a class="navbar-brand" href="#">{{ titulo }}</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -17,15 +17,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active titulo" aria-current="page" href="#">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
-            </li>
-            <button @click="test(alertName)">Click</button>
           </ul>
         </div>
       </div>
@@ -36,22 +29,11 @@
 <script>
 export default {
   name: "NavBar",
-  props: {
-    alertName: {
-      type: String,
-      default: "Default",
-    },
-  },
   data() {
     return {
-      title: "Titulo",
+      titulo: "Dog API",
       user: null,
     };
-  },
-  methods: {
-    test() {
-      alert(this.alertName);
-    },
   },
 };
 </script>
